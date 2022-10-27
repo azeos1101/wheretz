@@ -11,6 +11,8 @@
 # WhereTZ.get(50.004444, 36.231389)
 # # => #<TZInfo::DataTimezone: Europe/Kiev>
 # ```
+require 'oj'
+
 module WhereTZ
   extend self
 
@@ -87,7 +89,7 @@ module WhereTZ
   end
 
   def geom_from_file(fname)
-    JSON.parse(File.read(fname)).dig('features', 0, 'geometry')
+    Oj.load(File.read(fname)).dig('features', 0, 'geometry')
   end
 
   def inside_multipolygon?(multipolygon, point)

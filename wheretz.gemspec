@@ -1,9 +1,9 @@
 Gem::Specification.new do |s|
   s.name     = 'wheretz'
-  s.version  = '0.0.6'
-  s.authors  = ['Victor Shepelev']
-  s.email    = 'zverok.offline@gmail.com'
-  s.homepage = 'https://github.com/zverok/wheretz'
+  s.version  = '0.1.0'
+  s.authors  = ['Victor Shepelev', 'Dmitriy Pavlenko']
+  s.email    = 'azeos1101@gmail.com'
+  s.homepage = 'https://github.com/azeos1101/wheretz'
 
   s.summary = 'Fast and precise time zone by geo coordinates lookup'
   s.licenses = ['MIT']
@@ -22,6 +22,8 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.bindir = 'bin'
   s.executables << 'wheretz'
+
+  s.add_dependency 'oj'
 
   s.add_development_dependency 'georuby', '~> 2.5'
 
